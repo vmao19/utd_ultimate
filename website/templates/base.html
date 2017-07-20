@@ -12,82 +12,149 @@
     <style type="text/css">
       .navbar {
         margin-bottom: 0px;
+       }
+      li.dropdown:hover > .dropdown-menu {
+        display: block;
       }
       .footer {
-        position: absolute;
+        position: relative;
         bottom: 0;
         width: 100%;
-        height: 150px;
+        height: 320px;
         background-color: #333;
+        margin: 0;
+        padding: 50px;
+      }
+      .social-media-bar {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #000;
+        padding: 15px;
       }
     </style>
 
   </head>
   <body>
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav">
+  <div class="navbar-wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href=""> University of Texas at Dallas - Ultimate Frisbee </a>
+          </li>
+        </ul>
 
-        <li class="active dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class=""></span> UTD ULTIMATE FRISBEE <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="" target="_blank">Dallas Ultimate Association</a></li>
-              <li><a href="" target="_blank">Dallas Ultimate Community Facebook</a></li>
-              <li><a href="" target="_blank">USA Ultimate</a></li>
-            </ul>
-        </li>
-      </ul>
+        <!-- "Men's A - WOOF" -->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Men's A Team - WOOF <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="" target="_blank">About</a></li>
+                <li><a href="" target="_blank">Roster</a></li>
+                <li><a href="" target="_blank">Gallery</a></li>
+                <li><a href="" target="_blank">Videos</a></li>
+                <li><a href="" target="_blank">Contact Us</a></li>
+                <li><a href="" target="_blank">Social Media</a></li>
+              </ul>
+          </li>
 
-      <!-- "Men's A - WOOF" -->
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Men's A Team - WOOF <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="" target="_blank">About</a></li>
-              <li><a href="" target="_blank">Roster</a></li>
-              <li><a href="" target="_blank">Gallery</a></li>
-              <li><a href="" target="_blank">Videos</a></li>
-              <li><a href="" target="_blank">Contact Us</a></li>
-              <li><a href="" target="_blank">Social Media</a></li>
-            </ul>
-        </li>
+          <!-- "Men's B - BARK" -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Men's B Team - BARK <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="" target="_blank">About</a></li>
+                <li><a href="" target="_blank">Roster</a></li>
+                <li><a href="" target="_blank">Gallery</a></li>
+                <li><a href="" target="_blank">Videos</a></li>
+                <li><a href="" target="_blank">Contact Us</a></li>
+                <li><a href="" target="_blank">Social Media</a></li>
+              </ul>
+          </li>
 
-        <!-- "Men's B - BARK" -->
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Men's B Team - BARK <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="" target="_blank">About</a></li>
-              <li><a href="" target="_blank">Roster</a></li>
-              <li><a href="" target="_blank">Gallery</a></li>
-              <li><a href="" target="_blank">Videos</a></li>
-              <li><a href="" target="_blank">Contact Us</a></li>
-              <li><a href="" target="_blank">Social Media</a></li>
-            </ul>
-        </li>
+          <!-- "Women's - Monstars" -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Women's Team - Monstars <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="" target="_blank">About</a></li>
+                <li><a href="" target="_blank">Roster</a></li>
+                <li><a href="" target="_blank">Gallery</a></li>
+                <li><a href="" target="_blank">Videos</a></li>
+                <li><a href="" target="_blank">Contact Us</a></li>
+                <li><a href="" target="_blank">Social Media</a></li>
+              </ul>
+          </li>
 
-        <!-- "Women's - Monstars" -->
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Women's Team - Monstars <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="" target="_blank">About</a></li>
-              <li><a href="" target="_blank">Roster</a></li>
-              <li><a href="" target="_blank">Gallery</a></li>
-              <li><a href="" target="_blank">Videos</a></li>
-              <li><a href="" target="_blank">Contact Us</a></li>
-              <li><a href="" target="_blank">Social Media</a></li>
-            </ul>
-        </li>
-      </ul>
+          <!-- "Helpful Links" -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Helpful Links <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="http://dallasultimate.org/" target="_blank">Dallas Ultimate Association</a></li>
+                <li><a href="https://www.facebook.com/groups/1564928507109923/" target="_blank">Dallas Ultimate Community Facebook</a></li>
+                <li><a href="http://www.usaultimate.org/index.html" target="_blank">USA Ultimate</a></li>
+                <li><a href="https://www.dallasroughnecks.com/" target="_blank">Dallas Roughnecks</a></li>
+                <li><a href="http://earlyrecognitioniscritical.org/" target="_blank">E.R.I.C (Early Recognition Is Critical)</a></li>
+              </ul>
+          </li>
+        </ul>
 
-    </div>
-  </nav>
+      </div>
+    </nav>
+  </div>
+
+  
 
   {% block content %}{% endblock %}
 
   <footer class="footer">
-    <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+        <img src="{% static 'UTD_Logo.jpg' %}" alt="..." width="80%" align="center">
+      </div>
+      <div class="col-md-2">
+        <p class="text-muted" align="center"> Men's A Team - WOOF </p>
+        <hr>
+        <p class="text-muted" align="center"><a href=""> About </a></p>
+        <p class="text-muted" align="center"><a href=""> About </a></p>
+        <p class="text-muted" align="center"><a href=""> About </a></p>
+        <p class="text-muted" align="center"><a href=""> About </a></p>
+        <p class="text-muted" align="center"><a href=""> About </a></p>
+        <p class="text-muted" align="center"><a href=""> About </a></p>
+      </div>
+      <div class="col-md-2">
+        <p class="text-muted" align="center"> Men's B Team - BARK </p>
+        <hr>
+      </div>
+      <div class="col-md-2">
+        <p class="text-muted" align="center"> Women's Team - Monstars </p>
+        <hr>
+      </div>
+      <div class="col-md-2">
+        <p class="text-muted" align="center"> Helpful Links </p>
+        <hr>
+      </div>
+    </div>
+  </footer>
+
+  <footer class="social-media-bar">
+    <div class="row">
+      <div class="col-md-2 col-md-offset-1">
+
+      </div>
+      <div class="col-md-2">
+        <p class="text-muted" align="center"> Men's A Team - WOOF </p>
+      </div>
+      <div class="col-md-2">
+        <p class="text-muted" align="center"> Men's B Team - BARK </p>
+      </div>
+      <div class="col-md-2">
+        <p class="text-muted" align="center"> Women's Team - Monstars </p>
+      </div>
+      <div class="col-md-2">
+        <p class="text-muted" align="center"><a href="#"> Back To Top </a></p>
+      </div>
     </div>
   </footer>
 
