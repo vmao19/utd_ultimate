@@ -12,9 +12,26 @@
     <style type="text/css">
       .navbar {
         margin-bottom: 0px;
-       }
+        background-color: #192c4e;
+        color: #000;
+      }
+      .nav.navbar-nav.navbar-right li a {
+        color: white;
+      }
+      .nav.navbar-nav li a {
+        color: white;
+      }
+      .nav.navbar-nav li a:hover {
+        color: #ccc;
+      }
+      .dropdown-menu {
+        background-color: #eb1a2c;
+      }
       li.dropdown:hover > .dropdown-menu {
         display: block;
+      }
+      .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+          background-color: #192c4e;
       }
       .footer {
         position: relative;
@@ -42,7 +59,7 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <ul class="nav navbar-nav">
-          <li class="active">
+          <li class="nav-logo">
             <a href=""> University of Texas at Dallas - Ultimate Frisbee </a>
           </li>
         </ul>
