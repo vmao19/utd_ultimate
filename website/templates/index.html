@@ -16,12 +16,15 @@
     }
     .carousel-inner {
     	width: 100%;
-    	max-height: 550px;
+    	max-height: 600px;
     }
     .carousel-inner .item img {
     	position: relative;
     	top: 20%;
     	transform: translateY(-20%);
+	}
+	.featurette {
+		padding: 20px;
 	}
     
 </style>
@@ -119,59 +122,65 @@
         <div class="col-lg-4">
           <img class="img-circle" src="{% static 'WOOF_Logo.png' %}" alt="Generic placeholder image" width="140" height="140">
           <h2>WOOF</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p>UT Dallas Men's A Ultimate Frisbee Team</p>
+          <p>Practices for Fall 2017 are Mondays (6-8pm), Wednesdays (6-8pm), and Fridays (5-7pm) at the UTD Soccer Fields.</p>
+          <p><a class="btn btn-default" href="#woof" role="button">Learn more &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="{% static 'Ultrastar.png' %}" alt="Generic placeholder image" width="140" height="140">
           <h2>BARK</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p>UT Dallas Men's B Ultimate Frisbee Team</p>
+          <p>Practices for Fall 2017 are Mondays (6-8pm), Wednesdays (6-8pm), and Fridays (5-7pm) at the UTD Soccer Fields.</p>
+          <p><a class="btn btn-default" href="#bark" role="button">Learn more &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
           <h2>Monstars</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p>UT Dallas Women's Ultimate Frisbee Team</p>
+          <p>Practices for Fall 2017 are Tuesdays (6-8pm), Thursdays (6-8pm), and Fridays (5-7pm) at the UTD Soccer Fields.</p>
+          <p><a class="btn btn-default" href="#monstars" role="button">Learn more &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
 
       <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
+      <hr class="featurette-divider" id="woof">
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+          <h2 class="featurette-heading">WOOF <span class="text-muted">men's a team</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <p><a class="btn btn-default" href="woof/roster.html" role="button">Meet the team &raquo;</a></p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="{% static '2017_WOOF_Sectionals_Team_Photo.jpg' %}" alt="WOOF at the 2017 North Texas Men's Conference Championships hosted at UT Dallas.">
         </div>
       </div>
 
-      <hr class="featurette-divider">
+      <hr class="featurette-divider" id="bark">
 
       <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+          <h2 class="featurette-heading">BARK <span class="text-muted">men's b team</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <p><a class="btn btn-default" href="#" role="button">Meet the team &raquo;</a></p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="{% static '2017_B_Team_Sectionals_Team_Photo.png' %}" alt="BARK at the 2017 North Texas Men's Conference Championships hosted at UT Dallas.">
         </div>
       </div>
 
-      <hr class="featurette-divider">
+      <hr class="featurette-divider" id="monstars">
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <h2 class="featurette-heading">Monstars <span class="text-muted">women's team</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <p><a class="btn btn-default" href="#" role="button">Meet the team &raquo;</a></p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="{% static '2017_Monstars_Sectionals_Team_Photo.png' %}" alt="Monstars at the 2017 Texas Women's Conference Championships hosted at UT Dallas.">
         </div>
       </div>
 
