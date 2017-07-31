@@ -26,7 +26,36 @@
 	.featurette {
 		padding: 20px;
 	}
-    
+
+	.overlay {
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  height: 100%;
+	  width: 100%;
+	  opacity: 0;
+	  transition: .5s ease;
+	  background-color: #fff;
+	}
+	.woof-highlights:hover .overlay {
+	  opacity: 0.75;
+	}
+	.rookie-highlights:hover .overlay {
+	  opacity: 0.75;
+	}
+	.monstars-highlights:hover .overlay {
+	  opacity: 0.75;
+	}
+
+	.play-button {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	}
 </style>
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -120,7 +149,7 @@
       <!-- Three columns of text below the carousel -->
       <div class="row" align="center">
         <div class="col-lg-4">
-          <img class="img-circle" src="{% static 'WOOF_Logo.png' %}" alt="Generic placeholder image" width="140" height="140">
+          <a href=""><img class="img-circle" src="{% static 'WOOF_Logo.png' %}" alt="Generic placeholder image" width="140" height="140"></a>
           <h2>WOOF</h2>
           <p>UT Dallas Men's A Ultimate Frisbee Team</p>
           <p>Practices for Fall 2017 are Mondays (6-8pm), Wednesdays (6-8pm), and Fridays (5-7pm) at the UTD Soccer Fields.</p>
@@ -153,8 +182,13 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
           <p><a class="btn btn-default" href="woof/roster.html" role="button">Meet the team &raquo;</a></p>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="{% static '2017_WOOF_Sectionals_Team_Photo.jpg' %}" alt="WOOF at the 2017 North Texas Men's Conference Championships hosted at UT Dallas.">
+        <div class="col-md-5 woof-highlights">
+          <a href="" data-toggle="modal" data-target=".woof-highlight-video">
+          	<img class="featurette-image img-responsive center-block" src="{% static '2017_WOOF_Sectionals_Team_Photo.jpg' %}" alt="WOOF at the 2017 North Texas Men's Conference Championships hosted at UT Dallas.">
+          	<div class="overlay">
+    			<i class="fa fa-play-circle fa-5x play-button"></i>
+  			</div>
+          </a>
         </div>
       </div>
 
@@ -166,8 +200,13 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
           <p><a class="btn btn-default" href="#" role="button">Meet the team &raquo;</a></p>
         </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" src="{% static '2017_B_Team_Sectionals_Team_Photo.png' %}" alt="BARK at the 2017 North Texas Men's Conference Championships hosted at UT Dallas.">
+        <div class="col-md-5 col-md-pull-7 rookie-highlights">
+          <a href="" data-toggle="modal" data-target=".rookie-highlight-video">
+          	<img class="box featurette-image img-responsive center-block" src="{% static '2017_B_Team_Sectionals_Team_Photo.png' %}" alt="BARK at the 2017 North Texas Men's Conference Championships hosted at UT Dallas.">
+          	<div class="overlay">
+    			<i class="fa fa-play-circle fa-5x play-button"></i>
+  			</div>
+          </a>
         </div>
       </div>
 
@@ -179,8 +218,13 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
           <p><a class="btn btn-default" href="#" role="button">Meet the team &raquo;</a></p>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="{% static '2017_Monstars_Sectionals_Team_Photo.png' %}" alt="Monstars at the 2017 Texas Women's Conference Championships hosted at UT Dallas.">
+        <div class="col-md-5 monstars-highlights">
+          <a href="" data-toggle="modal" data-target=".monstars-highlight-video" on-click="changeVideo('e80BbX05D7Y')">
+          	<img class="box featurette-image img-responsive center-block" src="{% static '2017_Monstars_Sectionals_Team_Photo.png' %}" alt="Monstars at the 2017 Texas Women's Conference Championships hosted at UT Dallas.">
+          	<div class="overlay">
+    			<i class="fa fa-play-circle fa-5x play-button"></i>
+  			</div>
+          </a>
         </div>
       </div>
 
@@ -188,8 +232,47 @@
 
       <!-- /END THE FEATURETTES -->
 
-    </div>
+</div>
 
+<!-- modals -->
+<div class="modal fade woof-highlight-video" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/6Be-JdOZ8Cc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade rookie-highlight-video" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/DcMjApdZIGI" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade monstars-highlight-video" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fmonstarsutd%2Fvideos%2F1158778484234183%2F&show_text=0&width=560" width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 {% endblock %}

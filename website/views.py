@@ -10,8 +10,6 @@ def woofroster(request):
 	return render(request, 'woof/roster.html')
 #def woofgallery(request):
 #	return render(request, 'woof/gallery.html')
-#def woofvideos(request):
-#	return render(request, 'woof/videos.html')
 #def woofcontactus(request):
 #	return render(request, 'woof/contactus.html')
 
@@ -21,8 +19,6 @@ def woofroster(request):
 #	return render(request, 'bark/roster.html')
 #def barkgallery(request):
 #	return render(request, 'bark/gallery.html')
-#def barkvideos(request):
-#	return render(request, 'bark/videos.html')
 #def barkcontactus(request):
 #	return render(request, 'bark/contactus.html')
 
@@ -32,7 +28,5 @@ def woofroster(request):
 #	return render(request, 'monstars/roster.html')
 #def monstarsgallery(request):
 #	return render(request, 'monstars/gallery.html')
-#def monstarsvideos(request):
-#	return render(request, 'monstars/videos.html')
 #def monstarscontactus(request):
 #	return render(request, 'monstars/contactus.html')
