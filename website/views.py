@@ -15,8 +15,8 @@ def woofroster(request):
 
 #def barkabout(request):
 #	return render(request, 'bark/about.html')
-#def barkroster(request):
-#	return render(request, 'bark/roster.html')
+def barkroster(request):
+	return render(request, 'bark/roster.html')
 #def barkgallery(request):
 #	return render(request, 'bark/gallery.html')
 #def barkcontactus(request):
@@ -24,8 +24,8 @@ def woofroster(request):
 
 #def monstarsabout(request):
 #	return render(request, 'monstars/about.html')
-#def monstarsroster(request):
-#	return render(request, 'monstars/roster.html')
+def monstarsroster(request):
+	return render(request, 'monstars/roster.html')
 #def monstarsgallery(request):
 #	return render(request, 'monstars/gallery.html')
 #def monstarscontactus(request):
