@@ -234,12 +234,79 @@
 
 </div>
 
+
+<script type="text/javascript">
+$(document).ready(function(){
+    /* Get iframe src attribute value i.e. YouTube video url
+    and store it in a variable */
+    var url1 = $("#video1").attr('src');
+    
+    /* Remove iframe src attribute on page load to
+    prevent autoplay in background */
+    $("#video1").attr('src', '');
+    
+    /* Assign the initially stored url back to the iframe src
+    attribute when modal is displayed */
+    $("#modal1").on('shown.bs.modal', function(){
+        $("#video1").attr('src', url1+"?autoplay=1");
+    });
+    
+    /* Assign empty url value to the iframe src attribute when
+    modal hide, which stop the video playing */
+    $("#modal1").on('hide.bs.modal', function(){
+        $("#video1").attr('src', '');
+    });
+
+    /* Get iframe src attribute value i.e. YouTube video url
+    and store it in a variable */
+    var url2 = $("#video2").attr('src');
+    
+    /* Remove iframe src attribute on page load to
+    prevent autoplay in background */
+    $("#video2").attr('src', '');
+    
+    /* Assign the initially stored url back to the iframe src
+    attribute when modal is displayed */
+    $("#modal2").on('shown.bs.modal', function(){
+        $("#video2").attr('src', url2+"?autoplay=1");
+    });
+    
+    /* Assign empty url value to the iframe src attribute when
+    modal hide, which stop the video playing */
+    $("#modal2").on('hide.bs.modal', function(){
+        $("#video2").attr('src', '');
+    });
+
+    /* Get iframe src attribute value i.e. YouTube video url
+    and store it in a variable */
+    var url3 = $("#video3").attr('src');
+    
+    /* Remove iframe src attribute on page load to
+    prevent autoplay in background */
+    $("#video3").attr('src', '');
+    
+    /* Assign the initially stored url back to the iframe src
+    attribute when modal is displayed */
+    $("#modal3").on('shown.bs.modal', function(){
+        $("#video3").attr('src', url3);
+    });
+    
+    /* Assign empty url value to the iframe src attribute when
+    modal hide, which stop the video playing */
+    $("#modal3").on('hide.bs.modal', function(){
+        $("#video3").attr('src', '');
+    });
+});
+</script>
+
+
+
 <!-- modals -->
-<div class="modal fade woof-highlight-video" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div id="modal1" class="modal fade woof-highlight-video" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-body">
-        <iframe width="100%" height="500" src="https://www.youtube.com/embed/6Be-JdOZ8Cc" frameborder="0" allowfullscreen></iframe>
+        <iframe id="video1" width="100%" height="500" src="https://www.youtube.com/embed/6Be-JdOZ8Cc" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -248,11 +315,11 @@
   </div>
 </div>
 
-<div class="modal fade rookie-highlight-video" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div id="modal2" class="modal fade rookie-highlight-video" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-body">
-        <iframe width="100%" height="500" src="https://www.youtube.com/embed/DcMjApdZIGI" frameborder="0" allowfullscreen></iframe>
+        <iframe id="video2" width="100%" height="500" src="https://www.youtube.com/embed/DcMjApdZIGI" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -261,11 +328,11 @@
   </div>
 </div>
 
-<div class="modal fade monstars-highlight-video" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div id="modal3" class="modal fade monstars-highlight-video" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-body">
-        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fmonstarsutd%2Fvideos%2F1158778484234183%2F&show_text=0&width=560" width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+        <iframe id="video3" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fmonstarsutd%2Fvideos%2F1158778484234183%2F&show_text=0&autoplay=1&volume=1" width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
