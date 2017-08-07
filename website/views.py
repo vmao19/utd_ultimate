@@ -4,8 +4,9 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 
-#def woofabout(request):
-#	return render(request, 'woof/about.html')
+def woofabout(request):
+	return render(request, 'woof/about.html')
+	
 def woofroster(request):
 	return render(request, 'woof/roster.html')
 #def woofgallery(request):

@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<style type="text/css">
+	.container {
+		padding: 50px;
+	}
+	body {
+		padding-top: 50px;
+	}
+	.featurette {
+		padding: 20px;
+	}
+  h1 {
+    margin-bottom: 50px;
+  }
+  h2 {
+    padding-top: 20px;
+    margin-bottom: 50px;
+  }
+  .row {
+    margin: 15px;
+  }
+  .box {
+    border-radius:50px;
+    padding: 10px;
+  }
+  .box:hover {
+      box-shadow: 0 0 10px #000;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #fff;
+  }
+  .woof-highlights:hover .overlay {
+    opacity: 0.75;
+  }
+  .rookie-highlights:hover .overlay {
+    opacity: 0.75;
+  }
+  .monstars-highlights:hover .overlay {
+    opacity: 0.75;
+  }
+
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+</style>
+
+<div class="container">
+
+  <h1 align="center"> ABOUT WOOF </h1>
+
+  <div class="row" align="center">
+    <div class="col-lg-10 col-lg-push-1 woof-highlights" align="center">
+          <a href="" data-toggle="modal" data-target=".woof-highlight-video">
+            <img class="featurette-image img-responsive center-block" src="{% static '2017_WOOF_Sectionals_Team_Photo.jpg' %}" alt="WOOF at the 2017 North Texas Men's Conference Championships hosted at UT Dallas.">
+            <div class="overlay">
+          <i class="fa fa-play-circle fa-5x play-button"></i>
+        </div>
+          </a>
+      </div>
+
+
+
+      
+    </div><!-- /.col-lg-4 -->
+    
+  </div><!-- /.row -->
+
+  <script type="text/javascript">
+$(document).ready(function(){
+    /* Get iframe src attribute value i.e. YouTube video url
+    and store it in a variable */
+    var url1 = $("#video1").attr('src');
+    
+    /* Remove iframe src attribute on page load to
+    prevent autoplay in background */
+    $("#video1").attr('src', '');
+    
+    /* Assign the initially stored url back to the iframe src
+    attribute when modal is displayed */
+    $("#modal1").on('shown.bs.modal', function(){
+        $("#video1").attr('src', url1+"?autoplay=1");
+    });
+    
+    /* Assign empty url value to the iframe src attribute when
+    modal hide, which stop the video playing */
+    $("#modal1").on('hide.bs.modal', function(){
+        $("#video1").attr('src', '');
+    });
+
+    /* Get iframe src attribute value i.e. YouTube video url
+    and store it in a variable */
+    var url2 = $("#video2").attr('src');
+    
+    /* Remove iframe src attribute on page load to
+    prevent autoplay in background */
+    $("#video2").attr('src', '');
+    
+    /* Assign the initially stored url back to the iframe src
+    attribute when modal is displayed */
+    $("#modal2").on('shown.bs.modal', function(){
+        $("#video2").attr('src', url2+"?autoplay=1");
+    });
+    
+    /* Assign empty url value to the iframe src attribute when
+    modal hide, which stop the video playing */
+    $("#modal2").on('hide.bs.modal', function(){
+        $("#video2").attr('src', '');
+    });
+
+    /* Get iframe src attribute value i.e. YouTube video url
+    and store it in a variable */
+    var url3 = $("#video3").attr('src');
+    
+    /* Remove iframe src attribute on page load to
+    prevent autoplay in background */
+    $("#video3").attr('src', '');
+    
+    /* Assign the initially stored url back to the iframe src
+    attribute when modal is displayed */
+    $("#modal3").on('shown.bs.modal', function(){
+        $("#video3").attr('src', url3);
+    });
+    
+    /* Assign empty url value to the iframe src attribute when
+    modal hide, which stop the video playing */
+    $("#modal3").on('hide.bs.modal', function(){
+        $("#video3").attr('src', '');
+    });
+});
+</script>
+
+
+
+<!-- modals -->
+<div id="modal1" class="modal fade woof-highlight-video" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe id="video1" width="100%" height="500" src="https://www.youtube.com/embed/6Be-JdOZ8Cc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
