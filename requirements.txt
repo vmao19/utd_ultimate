@@ -1,6 +1,5 @@
 dj-database-url==0.4.1
 Django==1.10.4
-get==0.0.0
 gunicorn==19.6.0
 node==0.9.18.1
 npm==0.1.1
