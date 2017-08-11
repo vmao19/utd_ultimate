@@ -17,18 +17,11 @@
     margin-bottom: 50px;
   }
   h2 {
-    padding-top: 20px;
+    margin-top: 50px;
     margin-bottom: 50px;
   }
   .row {
     margin: 15px;
-  }
-  .box {
-    border-radius:50px;
-    padding: 10px;
-  }
-  .box:hover {
-      box-shadow: 0 0 10px #000;
   }
 
   .overlay {
@@ -74,79 +67,76 @@
           <i class="fa fa-play-circle fa-5x play-button"></i>
         </div>
           </a>
-      </div>
-
-
-
-      
+      </div>      
     </div><!-- /.col-lg-4 -->
-    
+
+    <h2 align="center"> WOOF is the Men's Ultimate Frisbee A Team at the University of Texas at Dallas. </h2>
+
   </div><!-- /.row -->
 
   <script type="text/javascript">
-$(document).ready(function(){
-    /* Get iframe src attribute value i.e. YouTube video url
-    and store it in a variable */
-    var url1 = $("#video1").attr('src');
-    
-    /* Remove iframe src attribute on page load to
-    prevent autoplay in background */
-    $("#video1").attr('src', '');
-    
-    /* Assign the initially stored url back to the iframe src
-    attribute when modal is displayed */
-    $("#modal1").on('shown.bs.modal', function(){
-        $("#video1").attr('src', url1+"?autoplay=1");
-    });
-    
-    /* Assign empty url value to the iframe src attribute when
-    modal hide, which stop the video playing */
-    $("#modal1").on('hide.bs.modal', function(){
-        $("#video1").attr('src', '');
-    });
+    $(document).ready(function(){
+      /* Get iframe src attribute value i.e. YouTube video url
+      and store it in a variable */
+      var url1 = $("#video1").attr('src');
 
-    /* Get iframe src attribute value i.e. YouTube video url
-    and store it in a variable */
-    var url2 = $("#video2").attr('src');
-    
-    /* Remove iframe src attribute on page load to
-    prevent autoplay in background */
-    $("#video2").attr('src', '');
-    
-    /* Assign the initially stored url back to the iframe src
-    attribute when modal is displayed */
-    $("#modal2").on('shown.bs.modal', function(){
-        $("#video2").attr('src', url2+"?autoplay=1");
-    });
-    
-    /* Assign empty url value to the iframe src attribute when
-    modal hide, which stop the video playing */
-    $("#modal2").on('hide.bs.modal', function(){
-        $("#video2").attr('src', '');
-    });
+      /* Remove iframe src attribute on page load to
+      prevent autoplay in background */
+      $("#video1").attr('src', '');
 
-    /* Get iframe src attribute value i.e. YouTube video url
-    and store it in a variable */
-    var url3 = $("#video3").attr('src');
-    
-    /* Remove iframe src attribute on page load to
-    prevent autoplay in background */
-    $("#video3").attr('src', '');
-    
-    /* Assign the initially stored url back to the iframe src
-    attribute when modal is displayed */
-    $("#modal3").on('shown.bs.modal', function(){
-        $("#video3").attr('src', url3);
-    });
-    
-    /* Assign empty url value to the iframe src attribute when
-    modal hide, which stop the video playing */
-    $("#modal3").on('hide.bs.modal', function(){
-        $("#video3").attr('src', '');
-    });
-});
-</script>
+      /* Assign the initially stored url back to the iframe src
+      attribute when modal is displayed */
+      $("#modal1").on('shown.bs.modal', function(){
+          $("#video1").attr('src', url1+"?autoplay=1");
+      });
 
+      /* Assign empty url value to the iframe src attribute when
+      modal hide, which stop the video playing */
+      $("#modal1").on('hide.bs.modal', function(){
+          $("#video1").attr('src', '');
+      });
+
+      /* Get iframe src attribute value i.e. YouTube video url
+      and store it in a variable */
+      var url2 = $("#video2").attr('src');
+
+      /* Remove iframe src attribute on page load to
+      prevent autoplay in background */
+      $("#video2").attr('src', '');
+
+      /* Assign the initially stored url back to the iframe src
+      attribute when modal is displayed */
+      $("#modal2").on('shown.bs.modal', function(){
+          $("#video2").attr('src', url2+"?autoplay=1");
+      });
+
+      /* Assign empty url value to the iframe src attribute when
+      modal hide, which stop the video playing */
+      $("#modal2").on('hide.bs.modal', function(){
+          $("#video2").attr('src', '');
+      });
+
+      /* Get iframe src attribute value i.e. YouTube video url
+      and store it in a variable */
+      var url3 = $("#video3").attr('src');
+
+      /* Remove iframe src attribute on page load to
+      prevent autoplay in background */
+      $("#video3").attr('src', '');
+
+      /* Assign the initially stored url back to the iframe src
+      attribute when modal is displayed */
+      $("#modal3").on('shown.bs.modal', function(){
+          $("#video3").attr('src', url3);
+      });
+
+      /* Assign empty url value to the iframe src attribute when
+      modal hide, which stop the video playing */
+      $("#modal3").on('hide.bs.modal', function(){
+          $("#video3").attr('src', '');
+      });
+    });
+  </script>
 
 
 <!-- modals -->

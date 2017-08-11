@@ -54,7 +54,7 @@
         padding: 15px;
       }
 
-      #myBtn {
+      #topBtn {
         display: none;
         position: fixed;
         bottom: 20px;
@@ -68,8 +68,7 @@
         padding: 15px;
         border-radius: 10px;
       }
-
-      #myBtn:hover {
+      #topBtn:hover {
         background-color: #999;
       }
 
@@ -193,7 +192,7 @@
         <p align="center"><a href="http://earlyrecognitioniscritical.org/" target="_blank">E.R.I.C (Early Recognition Is Critical)</a></p>
       </div>
 
-      <div
+      <div>
 
     </div>
   </footer>
@@ -218,25 +217,27 @@
     </div>
   </footer>
 
-  <button onclick="topFunction()" id="myBtn" title="Back To Top"><i class="fa fa-2x fa-angle-double-up"></i></button>
+  <button onclick="topFunction()" id="topBtn" title="Back To Top"><i class="fa fa-2x fa-angle-double-up"></i></button>
+
   <script>
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() { scrollFunction() };
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("topBtn").style.display = "block";
+        }
+        else {
+            document.getElementById("topBtn").style.display = "none";
+        }
     }
-}
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-</script>
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+  </script>
 
   </body>
 </html>
